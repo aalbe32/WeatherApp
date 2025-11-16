@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mapbox-gl": "^3.16.0",
+    "three": "^0.181.1"
+  }
+}
