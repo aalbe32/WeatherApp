@@ -5,7 +5,7 @@ import React from 'react';
 import DynamicSky from "../components/dynamicSky.jsx"
 
 
-export default function BrisbaneScene({ weatherApiData = {} }){
+export default function BrisbaneScene({ weatherApiData = {}, localtime = "" }){
 
   
   return (
@@ -17,9 +17,9 @@ export default function BrisbaneScene({ weatherApiData = {} }){
                 }}>
         <ambientLight intensity={0.2}/>
         <OrbitControls/>
-        <DynamicLighting localTime = {weatherApiData.localTime}/>
+        <DynamicLighting localTime = {localtime}/>
         <BrisbaneModel/>
-        <DynamicSky localTime = {weatherApiData.localTime}/>
+        <DynamicSky localTime = {localtime}/>
         <Cloud
           segments={weatherApiData.cloud_cover}
           bounds={[1500, 300, 400]}

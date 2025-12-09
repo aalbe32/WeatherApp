@@ -8,7 +8,7 @@ export default function DynamicLighting(localTime){
     if(timeOfDay == "day"){
         console.log("Day Lighting")
         return <pointLight
-                position={[0, 200, 2000]}
+                position={[0, 1000, 2000]}
                 intensity={10000000}
                 color={"white"}
                 />;
