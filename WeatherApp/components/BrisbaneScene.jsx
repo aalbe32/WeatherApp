@@ -1,8 +1,9 @@
-import {Canvas} from '@react-three/fiber'
+import {Canvas, useFrame} from '@react-three/fiber'
 import { OrbitControls, useGLTF, Cloud } from "@react-three/drei";
 import DynamicLighting from './dynamicLighting.jsx';
-import React from 'react';
+import React, { useRef } from 'react';
 import DynamicSky from "../components/dynamicSky.jsx"
+import AnimatedClouds from './AnimatedClouds.jsx';
 
 
 export default function BrisbaneScene({ weatherApiData = {}, localtime = "" }){
@@ -20,12 +21,7 @@ export default function BrisbaneScene({ weatherApiData = {}, localtime = "" }){
         <DynamicLighting localTime = {localtime}/>
         <BrisbaneModel/>
         <DynamicSky localTime = {localtime}/>
-        <Cloud
-          segments={weatherApiData.cloud_cover}
-          bounds={[1500, 300, 400]}
-          volume={500}
-          position={[-300, 600, -2000]}
-          color={"white"}/>
+        <AnimatedClouds cloud={weatherApiData.cloud}/>
       </Canvas>
     );
 };

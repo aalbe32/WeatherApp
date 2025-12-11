@@ -12,23 +12,19 @@ function App() {
 
 
   
-  const [weatherData, setWeatherData] = useState(
-    
-    {
-      current :{is_day: 1, 
+  const [weatherData, setWeatherData] = useState({
+      current :{is_day: 0, 
                 temp_c: 27.2,
                 condition:{text: "sunny", icon:""},
                 wind_kph: 16.2,
                 wind_dir: "NE",
-                cloud: 25,
-                air_quality: 70,
-                localtime: "2025-12-09 17:34"
-              },
+                cloud: 100,
+                },
       location:{name: "Brisbane",
                 country:"Australia",
                 lat: 40.71,
                 long: 21.40,
-                localtime:"2022-07-22 20:49" }
+                localtime:"2022-07-22 21:49" }
     });
 
   // useEffect(() => {
@@ -52,7 +48,6 @@ function App() {
         <p>wind_kph: {weatherData.current.wind_kph}</p>
         <p>wind_dir: {weatherData.current.wind_dir}</p>
         <p>cloud: {weatherData.current.cloud}</p>
-        <p>air_quality: {weatherData.current.air_quality}</p>
         <p>Local Time : {weatherData.location.localtime}</p>
       </div>
     </>
