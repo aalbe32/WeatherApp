@@ -4,11 +4,13 @@ import {getTimeOfDay} from "./helper.jsx"
 
 export default function DynamicSky(localTime){
     
+    // Inspired by https://tympanus.net/codrops/2025/09/18/creating-an-immersive-3d-weather-visualization-with-react-three-fiber/
+
+    // returns the state of the day from API request in format "day", "night", "dawn" or "dusk" 
     const timeOfDay = getTimeOfDay(localTime)
-    console.log(timeOfDay)
     
     if (timeOfDay == 'night'){
-    
+        // nighttime scene here the background is black and stars are renderd 
         return(
             <>
             <color attach="background" args={[0x000000]} />
@@ -26,6 +28,8 @@ export default function DynamicSky(localTime){
         );
     };
 
+
+    // Daytime scense using the sky component  
     let sunPosition;
     let inclination;
     let turbidity;    
