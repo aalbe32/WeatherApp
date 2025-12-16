@@ -12,8 +12,8 @@ export default function AnimatedClouds(cloud){
 
     const centerY = 1;
     const centerX = -300;
-    const bounceSpeed = 0.1;
-    const bounceHight = 20;
+    const bounceSpeed = 0.3;
+    const bounceHight = 10;
 
 
 

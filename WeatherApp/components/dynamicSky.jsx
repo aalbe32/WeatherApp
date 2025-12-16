@@ -10,7 +10,7 @@ export default function DynamicSky(localTime){
     const timeOfDay = getTimeOfDay(localTime)
     
     if (timeOfDay == 'night'){
-        // nighttime scene here the background is black and stars are renderd 
+        // night scene here the background is black and stars are renderd 
         return(
             <>
             <color attach="background" args={[0x000000]} />

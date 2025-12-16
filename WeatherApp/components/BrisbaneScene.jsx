@@ -4,12 +4,14 @@ import DynamicLighting from './dynamicLighting.jsx';
 import React, { useRef } from 'react';
 import DynamicSky from "../components/dynamicSky.jsx"
 import AnimatedClouds from './AnimatedClouds.jsx';
-
+import SoundPlayer from './audioPlayer.jsx';
 
 export default function BrisbaneScene({ weatherApiData = {}, localtime = "" }){
 
   
   return (
+    <>
+      <SoundPlayer localTime = {localtime}/>
       <Canvas
         camera={{position: [50, 0, 200], 
                  fov: 50,
@@ -23,6 +25,7 @@ export default function BrisbaneScene({ weatherApiData = {}, localtime = "" }){
         <DynamicSky localTime = {localtime}/>
         <AnimatedClouds cloud={weatherApiData.cloud}/>
       </Canvas>
+    </>
     );
 };
 

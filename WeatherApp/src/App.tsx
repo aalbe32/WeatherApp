@@ -4,7 +4,6 @@ import BrisbaneScene from "../components/BrisbaneScene"
 
 
 
-
 const KEY = import.meta.env.VITE_WAPI_TOKEN;
 
 
@@ -24,7 +23,7 @@ function App() {
                 country:"Australia",
                 lat: 40.71,
                 long: 21.40,
-                localtime:"2022-07-22 21:49" }
+                localtime:"2022-07-22 13:49" }
     });
 
   // useEffect(() => {
