@@ -3,10 +3,9 @@ import { useFrame } from "@react-three/fiber";
 import { Cloud, Clouds } from "@react-three/drei";
 
 
-
+// animates clouds for scene along a sine wave 
 export default function AnimatedClouds(cloud){
 
-    console.log(cloud)
     const cloudsRef = useRef()
     const cloud0 = useRef()
 
@@ -15,9 +14,6 @@ export default function AnimatedClouds(cloud){
     const bounceSpeed = 0.3;
     const bounceHight = 10;
 
-
-
-    
     
     useFrame(({clock}) => {
         if (!cloudsRef.current) return;
@@ -28,14 +24,6 @@ export default function AnimatedClouds(cloud){
         cloudsRef.current.position.x += 0.00000004;
 
         cloud0.current.rotation.x += 0.00000003
-        // cloud0.current.rotation.z += 0.003
-        // cloud0.current.rotation.y += 0.003
-
-        
-        // if(cloudsRef.current.position.x > 800){
-        //     movement * -1
-        // }
-        // cloud0.current.rotation.y -= delta;  
     })
 
     return(

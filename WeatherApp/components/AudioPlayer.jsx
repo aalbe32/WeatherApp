@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from "react";
 import useSound from "use-sound";
 import { getTimeOfDay } from "./helper";
 
-
+// function that plays ambiant sounds depending of if time is day/dawn/dusk/night
 export default function SoundPlayer(localTime){
     const timeOfDay = getTimeOfDay(localTime)
 

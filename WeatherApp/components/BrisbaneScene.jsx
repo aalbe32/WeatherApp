@@ -4,7 +4,7 @@ import DynamicLighting from './dynamicLighting.jsx';
 import React, { useRef } from 'react';
 import DynamicSky from "../components/dynamicSky.jsx"
 import AnimatedClouds from './AnimatedClouds.jsx';
-import SoundPlayer from './audioPlayer.jsx';
+import SoundPlayer from './AudioPlayer.jsx';
 
 export default function BrisbaneScene({ weatherApiData = {}, localtime = "" }){
 

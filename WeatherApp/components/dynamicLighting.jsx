@@ -2,6 +2,7 @@ import React from "react";
 import { getTimeOfDay } from "./helper";
 
 
+// sets lights for scene depending on if its day/night
 export default function DynamicLighting(localTime){
 
     const timeOfDay = getTimeOfDay(localTime)
@@ -19,7 +20,7 @@ export default function DynamicLighting(localTime){
 };
 
 
-
+// lighting for scene when time is night
 function PointLightDark(){
   return (
     <>
